@@ -4,7 +4,7 @@
   * @author  Ac6
   * @version V1.0
   * @date    01-December-2013
-  * @brief   Default main function.
+  * @brief   B0 button counter
   ******************************************************************************
 */
 
@@ -31,7 +31,7 @@ int main(void)
 	LCDSetupDisplay();
 	LCDSend2LinesOfStringWithDelay(0, "B 0:", "");
 
-	// clock and gpio settings B1 and AF
+	// clock and gpio settings B0 and AF
 	RCC->APB2ENR |= RCC_APB2ENR_IOPBEN | RCC_APB2ENR_AFIOEN;
 	GPIOB->CRL &= ~(GPIO_CRL_CNF0_0);
 	GPIOB->CRL |= GPIO_CRL_CNF0_1;
